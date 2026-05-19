@@ -66,19 +66,18 @@ const Hero = () => {
         {/* Project Tagline */}
         <div style={{ marginBottom: '14px' }}>
           <span style={{
-            background: 'rgba(0, 0, 0, 0.5)',
-            border: '1.5px solid #C4952A',
+            background: 'var(--color-gold)',
+            border: '1.5px solid var(--color-gold)',
             padding: '7px 28px',
             borderRadius: '50px',
-            color: '#C4952A',
+            color: '#ffffff',
             fontFamily: F_JOST,
             fontSize: 'clamp(12px, 1.4vw, 15px)',
-            fontWeight: '800',
+            fontWeight: '700',
             letterSpacing: '0.18em',
             textTransform: 'uppercase',
             display: 'inline-block',
-            backdropFilter: 'blur(10px)',
-            boxShadow: '0 4px 20px rgba(0,0,0,0.4)'
+            boxShadow: '0 4px 20px rgba(213,92,44,0.4)'
           }}>
             Godrej Golf Links
           </span>
@@ -142,7 +141,7 @@ const Hero = () => {
               }}>
                 <span style={{
                   display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-                  width: '17px', height: '17px', background: '#ffffff',
+                  width: '17px', height: '17px', background: 'var(--color-gold)',
                   borderRadius: '50%', flexShrink: 0,
                 }}>
                   <Check size={12} color="#000000" strokeWidth={3} />
@@ -187,10 +186,8 @@ const Hero = () => {
       }}>
         {/* USP row */}
         <div style={{
-          background: 'rgba(0,0,0,0.6)',
-          backdropFilter: 'blur(8px)',
+          background: 'var(--color-gold)',
           display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
-          borderTop: '1px solid rgba(196,149,42,0.3)',
           maxWidth: '1200px',
           margin: '0 auto',
         }}>
@@ -202,10 +199,10 @@ const Hero = () => {
             <div key={i} style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               gap: '8px', padding: '10px 12px',
-              borderRight: i < 2 ? '1px solid rgba(255,255,255,0.08)' : 'none',
+              borderRight: i < 2 ? '1px solid rgba(255,255,255,0.25)' : 'none',
             }}>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
-                stroke="#C4952A" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 6L9 17l-5-5" />
               </svg>
               <span style={{
@@ -218,13 +215,11 @@ const Hero = () => {
           ))}
         </div>
 
+        {/* Info row */}
         <div style={{
-          background: 'linear-gradient(135deg, rgba(26,26,26,0.95) 0%, rgba(38,38,38,0.85) 100%)',
-          backdropFilter: 'blur(12px)',
+          background: 'var(--color-dark)',
           display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
-          borderTop: '1px solid rgba(255,255,255,0.15)',
-          boxShadow: '0 -10px 40px rgba(0,0,0,0.5)',
-          overflow: 'hidden',
+          borderTop: '2px solid var(--color-gold)',
           margin: '0 auto',
           maxWidth: '1200px',
         }}>
@@ -233,22 +228,18 @@ const Hero = () => {
             '3 & 4 BHK APARTMENTS',
             '₹ 3.60 Cr* ONWARDS',
           ].map((text, i) => (
-            <div
-              key={i}
-              style={{
-                textAlign: 'center',
-                padding: '14px 12px',
-                borderRight: i < 2 ? '1px solid rgba(255,255,255,0.1)' : 'none',
-              }}
-            >
+            <div key={i} style={{
+              textAlign: 'center',
+              padding: '14px 12px',
+              borderRight: i < 2 ? '1px solid rgba(255,255,255,0.08)' : 'none',
+            }}>
               <span style={{
                 fontFamily: F_JOST,
                 fontSize: 'clamp(11px, 1.8vw, 16px)',
                 fontWeight: '700',
                 color: '#ffffff',
-                letterSpacing: '0.04em',
+                letterSpacing: '0.06em',
                 textTransform: 'uppercase',
-                textShadow: '0 1px 4px rgba(0,0,0,0.3)',
               }}>
                 {text}
               </span>
